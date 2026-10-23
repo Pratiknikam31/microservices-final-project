@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dealer Evaluation System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css">
+    <style>
+        .container {
+            max-width: 800px;
+            margin-top: 50px;
+        }
+        .price-card {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="title is-1 has-text-centered">Dealer Evaluation System</h1>
+            <p class="subtitle has-text-centered">Compare prices across multiple dealers</p>
+
+            <div class="box">
+                <div class="field">
+                    <label class="label">Select Product</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select id="productSelect">
+                                <option value="">-- Select a Product --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field" id="dealerField" style="display: none;">
+                    <label class="label">Select Dealer</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select id="dealerSelect">
+                                <option value="">-- Select a Dealer --</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="priceDisplay" class="notification is-info" style="display: none;">
+                    <p id="priceText"></p>
+                </div>
+
+                <div id="allPricesDisplay" style="display: none;">
+                    <h3 class="title is-4">All Dealer Prices</h3>
+                    <div id="allPricesList"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
